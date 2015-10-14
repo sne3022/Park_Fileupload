@@ -1,0 +1,51 @@
+<div class="ui accordion" 
+style="width:530px; margin:auto; text-align: center;">
+      <div class="title">
+      <i class="Pointing Down icon"></i>
+       파일 업로드(클릭)
+      </div>
+
+      <div class="content">
+        <div class="ui form">
+          <div class="filed">
+            <div class="ui list contentImg" data-position="left center" data-content="이미지를 선택하세요.">
+              <div class="item" ng-repeat="img in imgArrayList track by $index" style="float:left; margin-bottom:20px;">
+                <div class="ui img left floated">
+                 <div class="ui fluid image">
+                   <div class="ui left corner label" style="text-align: left;">
+                    <input type="checkbox" name="check" ng-model="img.checkValue" ng-click="checkedmodule(img)" id="input<%img.number%>" style="margin-left:3px; width:25px; height:25px;">
+                  </div> 
+                  <div class="ui right corner red label" ng-show="img.titleImage">
+                    <i class="icon star"></i>
+                  </div>
+                  <img ng-src="<%img.src%>" ng-mouseenter="hoverImage($event)" ng-mouseleave="outImage($event)" ng-click="checkedImage(img, $event)"  style="width:100px; height:100px;" id="<%img.number%>">
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="filed" style="clear:both; width:100%; height:36px;margin-bottom: 20px;">
+           <div type="file" class="ui gray basic button left floated" ngf-select="fileselect($files)">
+            <i class="upload icon"></i>업로드
+           </div>
+           
+           <div class="ui gray basic button right floated" ng-click="delete()">
+              <i class="trash icon"></i>삭제
+           </div>
+           <div class="ui gray basic button right floated" ng-click="titleImage()">
+            <i class="File Image Outline icon"></i>타이틀 이미지
+           </div>
+           
+          </div>
+
+          <div class="field">
+
+            <div class="ui indicating progress active" data-percent="100" style="display: none;">
+              <div class="bar" style="transition-duration: 0ms; width: 1%;"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+</div>
