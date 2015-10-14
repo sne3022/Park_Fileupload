@@ -21,11 +21,11 @@ public angular-file-upload 설치하기.<br>
 다운로드를 완료하였다면 다음과 같이 스크립트 태그를 적용할 HTML 파일을 추가한다.<br>
 참고 사이트:<br> 
 http://webframeworks.kr/tutorials/angularjs/angularjs_fileupload/ <br>
-https://github.com/danialfarid/ng-file-upload#install <br>
+https://github.com/danialfarid/ng-file-upload#install <br><br>
 
 
 
-Contracts 와 Service 구현 및 연결<br><br> 
+Contracts 와 Service 구현 및 연결<br>
 
 Project->App->Contracts <br>
 :IFile.php 생성 <br>
